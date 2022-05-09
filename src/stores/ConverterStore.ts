@@ -5,8 +5,6 @@ export const useConverterStore = defineStore({
   state: () => ({
     Euros: 0,
     Rubles: 0,
-    symbRubles: "₽",
-    symbEuros: "€",
   }),
 
   persist: true,

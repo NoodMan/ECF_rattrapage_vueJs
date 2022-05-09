@@ -1,17 +1,17 @@
 <template>
   <div>
     <h2>It's your turn have fun €-₽ or ₽-€ 🧐</h2>
-    <br>
+    <br />
     <p>
       Thanks to my converter you can convert euros into rubles and rubles into
       euros with the following exchange rate:
       <center>
         Euro -> Ruble : 0.0137
-        <br>
+        <br />
         Ruble -> Euro : 72.8192
       </center>
     </p>
-    <br>
+    <br />
     <form @submit.prevent="SubmitEuro">
       <h4>Amount in Euros-евро to be converted</h4>
       <input
@@ -21,18 +21,18 @@
         min="1"
         max="1 000 000 000"
       />
-      <br>
-      <br>
+      <br />
+      <br />
       <input type="submit" value="Conversion/конверсия" />
-      <br>
+      <br />
     </form>
-    <br>
+    <br />
     <center>
-    <div v-if="Euro">
-      <EurosComponent />
-    </div>
+      <div v-if="Euro">
+        <EurosComponent />
+      </div>
     </center>
-    <br>
+    <br />
     <form @submit.prevent="SubmitRuble">
       <h4>Amount in Ruble-рубль to be converted</h4>
       <input
@@ -42,15 +42,15 @@
         min="1"
         max="1 000 000 000"
       />
-      <br>
-      <br>
+      <br />
+      <br />
       <input type="submit" value="конверсия/Conversion" />
     </form>
-    <br>
+    <br />
     <center>
-    <div v-if="Ruble">
-      <RublesComponent />
-    </div>
+      <div v-if="Ruble">
+        <RublesComponent />
+      </div>
     </center>
   </div>
 </template>
@@ -65,15 +65,12 @@ export default {
   components: { EurosComponent, RublesComponent },
 
   computed: {
-    ...mapWritableState(useConverterStore, [
-      "Rubles",
-      "Euros",
-    ]),
+    ...mapWritableState(useConverterStore, ["Rubles", "Euros"]),
   },
   data() {
     return {
-      T: false,
-      P: false,
+      Euros: false,
+      Rubles: false,
       Euros: Number,
       Rubles: Number,
     };
@@ -102,5 +99,4 @@ form {
 input {
   border-radius: 12px;
 }
-
 </style>

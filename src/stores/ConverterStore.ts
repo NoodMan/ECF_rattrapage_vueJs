@@ -10,8 +10,8 @@ export const useConverterStore = defineStore({
   persist: true,
 
   getters: {
-    getEuros: (state) => state.Euros * 72.8192,
-    getRubles: (state) => state.Rubles * 0.0137,
+    getEuros: (state) => state.Euros * 72.85,
+    getRubles: (state) => state.Rubles * 0.014,
   },
   actions: {
   },

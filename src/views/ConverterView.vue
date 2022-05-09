@@ -6,9 +6,9 @@
       Thanks to my converter you can convert euros into rubles and rubles into
       euros with the following exchange rate:
       <center>
-        Euro -> Ruble : 0.0137
+        Euro -> Ruble : 0.014
         <br />
-        Ruble -> Euro : 72.8192
+        Ruble -> Euro : 72.85
       </center>
     </p>
     <br />
@@ -19,7 +19,7 @@
         v-model="Euros"
         placeholder="Euros-евро to be converted"
         min="1"
-        max="1 000 000 000"
+        max="1 000 000"
       />
       <br />
       <br />
@@ -40,7 +40,7 @@
         v-model="Rubles"
         placeholder="Ruble-рубль to be converted"
         min="1"
-        max="1 000 000 000"
+        max="1 000 000"
       />
       <br />
       <br />
@@ -68,12 +68,6 @@ export default {
     ...mapWritableState(useConverterStore, ["Rubles", "Euros"]),
   },
   data() {
-    return {
-      Euros: false,
-      Rubles: false,
-      Euros: Number,
-      Rubles: Number,
-    };
   },
   methods: {
     SubmitEuro() {

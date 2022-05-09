@@ -1,21 +1,17 @@
 <template>
   <div>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Euros</th>
-          <th scope="col"></th>
-          <th scope="col">Rubles</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{ this.Euros }} €</td>
-          <td> =  </td>
-          <td>{{ this.getEuros }} ₽</td>
-        </tr>
-      </tbody>
-    </table>
+    <tr>
+      <th>Euros </th>
+      <th> </th>
+      <th> ===></th>
+      <th>Rubles</th>
+    </tr>
+
+    <tr>
+      <td>{{ this.Euros }} €</td>
+      <td> = </td>
+      <td>{{ this.getEuros }} ₽</td>
+    </tr>
   </div>
 </template>
 
@@ -36,4 +32,8 @@ export default {
 </script>
 
 <style>
+tr {
+  font-size: 25px;
+  color: rgb(225, 22, 96);
+}
 </style>

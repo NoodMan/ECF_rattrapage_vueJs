@@ -10,7 +10,7 @@
     <tr>
       <td>{{ this.Euros }} €</td>
       <td> = </td>
-      <td>{{ this.getEuros }} ₽</td>
+      <td>{{ this.getEuros.toFixed(2) }} ₽</td>
     </tr>
   </div>
 </template>

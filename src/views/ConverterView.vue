@@ -68,9 +68,15 @@ export default {
     ...mapWritableState(useConverterStore, ["Rubles", "Euros"]),
   },
   data() {
+    return {
+      Euro:0,
+      Ruble:0,
+   
+    }
   },
   methods: {
     SubmitEuro() {
+      console.log('-->⛔️ Je suis ici 🎉 <--');
       this.Euro = true;
       this.Euros = this.Euros;
     },
